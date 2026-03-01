@@ -6,7 +6,19 @@
   <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
   <img src="https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
   <img src="https://img.shields.io/badge/React_Router-6-CA4245?style=for-the-badge&logo=react-router&logoColor=white" />
+  <br /><br />
+  <a href="https://crypto-now-puce.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/🚀 Live Demo-Visit Now-22c55e?style=for-the-badge" />
+  </a>
 </div>
+
+---
+
+## 🌐 Live Demo
+
+> Try the app live, no setup needed!
+
+**👉 [https://crypto-now-puce.vercel.app/](https://crypto-now-puce.vercel.app/)**
 
 ---
 
