@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🪙 CryptoNow</h1>
+  <h1> CryptoNow</h1>
   <p>A modern web application for tracking cryptocurrency market data in real time.</p>
 
   <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
