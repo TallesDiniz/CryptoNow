@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    bottom: 0;
+    max-width: 1080px;
+}
+
+.imgmodify img{
+    transition:opacity 0.2s ease;
+    height: 300px
+}
+
+.imgmodify{
+    height: 300px;
+}
+
+.imgmodify img:hover{
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 600px) {
+    .imgmodify{
+        height: 200px;
+        padding: 0 10px;
+    }
+
+    .imgmodify img{
+        height: 180px;
+    }
+}
+
