@@ -1,73 +1,134 @@
-# React + TypeScript + Vite
+<div align="center">
+  <h1>🪙 CryptoNow</h1>
+  <p>A modern web application for tracking cryptocurrency market data in real time.</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/React_Router-6-CA4245?style=for-the-badge&logo=react-router&logoColor=white" />
+</div>
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📖 About
 
-## React Compiler
+**CryptoNow** is a web application that lets users search for and monitor cryptocurrency market data, including real-time prices, 24h highs/lows, trading volume, market cap, and price variation — all formatted in Brazilian Real (BRL).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🔍 **Search** for any cryptocurrency by symbol
+- 📈 **Real-time price data** including 24h high, 24h low, and delta
+- 💰 **Market cap and volume** displayed in BRL
+- 📄 **Detail page** for each coin with full market information
+- 🔁 **Auto-redirect** to home if an invalid coin is searched
+- 📱 **Responsive layout** for mobile and desktop
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🖥️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Technology | Purpose |
+|---|---|
+| React 18 | UI framework |
+| TypeScript | Type safety |
+| Vite | Build tool & dev server |
+| React Router DOM v6 | Client-side routing |
+| CSS Modules | Scoped component styling |
+
+---
+
+## 📁 Project Structure
+
+```
+CryptoNow/
+├── public/               # Static assets
+├── src/
+│   ├── assets/           # Images and icons
+│   ├── components/
+│   │   ├── header/       # Header with logo
+│   │   └── layout/       # Shared layout wrapper
+│   ├── pages/
+│   │   ├── home/         # Coin listing & search
+│   │   ├── detail/       # Coin detail view
+│   │   └── notfound/     # 404 page
+│   ├── routes.tsx        # App routing config
+│   └── main.tsx          # Entry point
+├── index.html
+├── vite.config.ts
+└── package.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) v18 or higher
+- npm or yarn
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/TallesDiniz/CryptoNow.git
+
+# 2. Navigate into the project
+cd CryptoNow
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm run dev
 ```
+
+The app will be available at `http://localhost:5173`.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## 📡 API
+
+This project consumes a cryptocurrency data API to fetch coin information. The following data is displayed per coin:
+
+| Field | Description |
+|---|---|
+| `name` | Full coin name |
+| `symbol` | Ticker symbol (e.g. BTC) |
+| `price` | Current price in BRL |
+| `market_cap` | Total market capitalization |
+| `high_24h` | Highest price in the last 24h |
+| `low_24h` | Lowest price in the last 24h |
+| `delta_24h` | Percentage change in the last 24h |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+1. Fork the project
+2. Create your feature branch: `git checkout -b feature/my-feature`
+3. Commit your changes: `git commit -m 'feat: add my feature'`
+4. Push to the branch: `git push origin feature/my-feature`
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+  Made with ❤️ by <a href="https://github.com/TallesDiniz">TallesDiniz</a>
+</div>
