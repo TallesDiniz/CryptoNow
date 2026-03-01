@@ -87,7 +87,7 @@ export function Home() {
                         <th scope='col'>Moedas</th>
                         <th scope='col'>Valor Mercado</th>
                         <th scope='col'>Preço</th>
-                        <th scope='col'>Volume</th>
+                        <th scope='col'>Delta</th>
 
                     </tr>
                 </thead>
@@ -103,10 +103,10 @@ export function Home() {
                         <td className={styles.tdLabel} data-label="Valor Mercado">
                             {coin.formattedMarket}
                         </td>
-                        <td className={styles.tdLabel} data-label="volume">
+                        <td className={styles.tdLabel} data-label="preço">
                             {coin.formattedPrice}
                         </td>
-                        <td className={coin.numberDelta >= 0 ? styles.tdProfit : styles.tdLoss} data-label="Volume">
+                        <td className={coin.numberDelta >= 0 ? styles.tdProfit : styles.tdLoss} data-label="Delta">
                             <span >{coin.delta_24h}</span>
                         </td>
                     </tr>
